@@ -197,7 +197,7 @@ final class AboutWindowController: NSWindowController, NSWindowDelegate {
             styleMask: [.titled, .closable, .fullSizeContentView],
             backing: .buffered, defer: false
         )
-        win.title = "NotifSounds"
+        win.title = "NotiSounds"
         win.titlebarAppearsTransparent = true
         win.isMovableByWindowBackground = true
         win.backgroundColor = NSColor(calibratedWhite: 0.11, alpha: 1)
@@ -232,7 +232,7 @@ final class AboutWindowController: NSWindowController, NSWindowDelegate {
         icon.heightAnchor.constraint(equalToConstant: 64).isActive = true
 
         // Name
-        let nameLabel = fixed("NotifSounds", size: 20, bold: true, color: .white)
+        let nameLabel = fixed("NotiSounds", size: 20, bold: true, color: .white)
 
         // Version
         let v = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0"
@@ -285,10 +285,10 @@ final class AboutWindowController: NSWindowController, NSWindowDelegate {
     }
 
     @objc private func openReleaseNotes() {
-        NSWorkspace.shared.open(URL(string: "https://edexplore.app/notifsounds/release-notes")!)
+        NSWorkspace.shared.open(URL(string: "https://edexplore.app/notisounds/release-notes")!)
     }
     @objc private func openPrivacyPolicy() {
-        NSWorkspace.shared.open(URL(string: "https://edexplore.app/notifsounds/privacy")!)
+        NSWorkspace.shared.open(URL(string: "https://edexplore.app/notisounds/privacy")!)
     }
 }
 

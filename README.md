@@ -1,8 +1,8 @@
-# NotifSounds
+# NotiSounds
 
 A lightweight macOS menu bar app that controls notification alert sounds independently from the system output volume. Built entirely in Swift using `swiftc` — no Xcode project required to build or run locally.
 
-![NotifSounds menu bar dropdown](icons/amber_preview.png)
+![NotiSounds menu bar dropdown](icons/amber_preview.png)
 
 ---
 
@@ -50,7 +50,7 @@ swift make_icns.swift      # writes icons/AppIcon.icns + full iconset
 main.swift                  All Swift source — ToggleSwitch, ContentViewController,
                             AboutWindowController, AppDelegate
 Info.plist                  Bundle metadata (LSUIElement, CFBundleIconFile, etc.)
-NotifSounds.entitlements    Sandbox + permissions (sandbox OFF for local dev)
+NotiSounds.entitlements    Sandbox + permissions (sandbox OFF for local dev)
 build.sh                    Compile → sign (ad-hoc) → install to /Applications
 generate_icons.swift        Generates the three initial icon design options
 make_icns.swift             Renders all required icon sizes and packages AppIcon.icns
@@ -115,7 +115,7 @@ Uses `SMAppService.mainApp.register() / .unregister()` (macOS 13+) rather than t
 
 The Swift source, icon, and `Info.plist` are already App Store-ready. Three file changes are needed at submission time:
 
-**`NotifSounds.entitlements`**
+**`NotiSounds.entitlements`**
 
 ```diff
 - <key>com.apple.security.app-sandbox</key><false/>
@@ -129,15 +129,15 @@ The Swift source, icon, and `Info.plist` are already App Store-ready. Three file
 
 ```xml
 <key>NSAppleEventsUsageDescription</key>
-<string>NotifSounds uses AppleScript to read and set the system alert volume.</string>
+<string>NotiSounds uses AppleScript to read and set the system alert volume.</string>
 ```
 
 **Then:**
 
 - [ ] Enroll in Apple Developer Program (€99 / year)
 - [ ] Create Xcode project, import all source files, assign Distribution certificate
-- [ ] Host Privacy Policy at `edexplore.app/notifsounds/privacy`
-- [ ] Host Release Notes at `edexplore.app/notifsounds/release-notes`
+- [ ] Host Privacy Policy at `edexplore.app/notisounds/privacy`
+- [ ] Host Release Notes at `edexplore.app/notisounds/release-notes`
 - [ ] Set price to Tier 1 (€0.99) in App Store Connect
 - [ ] Submit for review
 

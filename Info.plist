@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleName</key>
-    <string>NotifSounds</string>
+    <string>NotiSounds</string>
     <key>CFBundleDisplayName</key>
-    <string>Notification Sounds</string>
+    <string>NotiSounds</string>
     <key>CFBundleIdentifier</key>
-    <string>com.local.notifsounds</string>
+    <string>com.local.notisounds</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>CFBundleShortVersionString</key>
     <string>1.0</string>
     <key>CFBundleExecutable</key>
-    <string>NotifSounds</string>
+    <string>NotiSounds</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>LSMinimumSystemVersion</key>

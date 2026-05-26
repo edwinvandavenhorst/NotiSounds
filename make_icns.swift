@@ -1,10 +1,10 @@
 #!/usr/bin/swift
-// Generates AppIcon.icns for the amber NotifSounds icon.
+// Generates AppIcon.icns for the amber NotiSounds icon.
 import Cocoa
 
 _ = NSApplication.shared
 
-let outDir   = NSHomeDirectory() + "/scripts/NotifSoundsApp/icons"
+let outDir   = NSHomeDirectory() + "/scripts/NotiSoundsApp/icons"
 let iconset  = outDir + "/AppIcon.iconset"
 try! FileManager.default.createDirectory(atPath: iconset, withIntermediateDirectories: true)
 

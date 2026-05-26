@@ -2,7 +2,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-APP_NAME="NotifSounds"
+APP_NAME="NotiSounds"
 BUILD_DIR="$SCRIPT_DIR/build"
 APP_BUNDLE="$BUILD_DIR/$APP_NAME.app"
 CONTENTS="$APP_BUNDLE/Contents"
@@ -27,7 +27,7 @@ echo "Built: $APP_BUNDLE"
 echo ""
 read -rp "Install to /Applications? [y/N] " reply
 if [[ "${reply:-N}" =~ ^[Yy]$ ]]; then
-    pkill -x NotifSounds 2>/dev/null || true
+    pkill -x NotiSounds 2>/dev/null || true
     rm -rf "/Applications/$APP_NAME.app"          # must remove first — cp -r nests if dest exists
     cp -r "$APP_BUNDLE" "/Applications/"
     echo "Installed: /Applications/$APP_NAME.app"

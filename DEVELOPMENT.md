@@ -1,4 +1,4 @@
-# CLAUDE.md — NotiSounds
+# Development Notes
 
 ## Working directory
 All source editing, building, and testing happens from:

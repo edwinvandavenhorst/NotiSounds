@@ -3,7 +3,7 @@ import Cocoa
 
 _ = NSApplication.shared  // initialise AppKit so SF Symbols render
 
-let outDir = NSHomeDirectory() + "/Documents/Claude/NotiSoundsApp/icons"
+let outDir = URL(fileURLWithPath: CommandLine.arguments[0]).deletingLastPathComponent().appendingPathComponent("icons").path
 try! FileManager.default.createDirectory(atPath: outDir, withIntermediateDirectories: true)
 
 struct Style {
@@ -88,4 +88,4 @@ for style in styles {
     }
 }
 
-print("Done — icons at ~/Documents/Claude/NotiSoundsApp/icons/")
+print("Done — icons written to ./icons/")

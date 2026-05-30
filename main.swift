@@ -193,7 +193,7 @@ final class AboutWindowController: NSWindowController, NSWindowDelegate {
 
     private init() {
         let win = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 280, height: 240),
+            contentRect: NSRect(x: 0, y: 0, width: 280, height: 280),
             styleMask: [.titled, .closable, .fullSizeContentView],
             backing: .buffered, defer: false
         )
@@ -239,6 +239,15 @@ final class AboutWindowController: NSWindowController, NSWindowDelegate {
         let verLabel = fixed("Version \(v)", size: 12, bold: false,
                              color: NSColor(white: 0.55, alpha: 1))
 
+        // Description
+        let desc = NSTextField(wrappingLabelWithString:
+            "Control your Mac's notification volume from the menu bar independently from your speaker volume.")
+        desc.font = .systemFont(ofSize: 12)
+        desc.textColor = NSColor(white: 0.60, alpha: 1)
+        desc.alignment = .center
+        desc.translatesAutoresizingMaskIntoConstraints = false
+        desc.widthAnchor.constraint(equalToConstant: 220).isActive = true
+
         // Links
         let rnBtn = link("Release Notes", #selector(openReleaseNotes))
         let ppBtn = link("Privacy Policy", #selector(openPrivacyPolicy))
@@ -251,13 +260,14 @@ final class AboutWindowController: NSWindowController, NSWindowDelegate {
         let cpLabel = fixed("© \(year) Ed Explore", size: 11, bold: false,
                             color: NSColor(white: 0.38, alpha: 1))
 
-        let stack = NSStackView(views: [icon, nameLabel, verLabel, linksRow, cpLabel])
+        let stack = NSStackView(views: [icon, nameLabel, verLabel, desc, linksRow, cpLabel])
         stack.orientation = .vertical; stack.alignment = .centerX; stack.spacing = 6
         stack.translatesAutoresizingMaskIntoConstraints = false
         cv.addSubview(stack)
 
         stack.setCustomSpacing(12, after: icon)
-        stack.setCustomSpacing(20, after: verLabel)
+        stack.setCustomSpacing(10, after: verLabel)
+        stack.setCustomSpacing(18, after: desc)
         stack.setCustomSpacing(12, after: linksRow)
 
         NSLayoutConstraint.activate([

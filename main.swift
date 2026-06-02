@@ -317,7 +317,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.setActivationPolicy(.accessory)
         setupContent()
         setupStatusItem()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) { [weak self] in self?.openPanel() }
+        // Starts silently — icon appears in menu bar without opening the panel.
+        // applicationShouldHandleReopen handles the "open from Applications" case.
     }
 
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows: Bool) -> Bool {

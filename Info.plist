@@ -26,6 +26,9 @@
     <string>AppIcon</string>
     <key>NSAppleEventsUsageDescription</key>
     <string>NotiSounds uses AppleScript to read and set the system alert volume.</string>
+    <!-- Encryption compliance — app uses no non-exempt encryption -->
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false/>
     <key>NSPrincipalClass</key>
     <string>NSApplication</string>
     <key>LSMultipleInstancesProhibited</key>

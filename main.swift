@@ -331,7 +331,15 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var dropPanel: NSPanel?
     private var clickMonitor: Any?
 
-    private let backupPath = NSHomeDirectory() + "/.config/notif-volume-backup"
+    // ~/.config/ is outside the sandbox. Use Application Support, which is
+    // accessible both in the sandbox and in local (ad-hoc) builds.
+    private let backupPath: String = {
+        let fm  = FileManager.default
+        let dir = fm.urls(for: .applicationSupportDirectory, in: .userDomainMask)
+                    .first?.path ?? NSHomeDirectory() + "/Library/Application Support"
+        try? fm.createDirectory(atPath: dir, withIntermediateDirectories: true)
+        return dir + "/notif-volume-backup"
+    }()
     private let about = AboutWindowController.shared
 
     func applicationDidFinishLaunching(_: Notification) {

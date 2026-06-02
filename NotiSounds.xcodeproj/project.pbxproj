@@ -1,0 +1,234 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83CBBA051B6820AE0090C21A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBBA041B6820AE0090C21A /* main.swift */; };
+		83CBBA081B6820AE0090C21A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CBBA071B6820AE0090C21A /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83CBBF0E1B6820DE0090C21A /* NotiSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotiSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CBBA041B6820AE0090C21A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		83CBBA061B6820AE0090C21A /* NotiSounds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotiSounds.entitlements; sourceTree = "<group>"; };
+		83CBBA071B6820AE0090C21A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83CBBA091B6820AE0090C21A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83CBBA031B6820AE0090C21A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83CBB9F81B6820AE0090C21A /* NotiSounds */ = {
+			isa = PBXGroup;
+			children = (
+				83CBBA041B6820AE0090C21A /* main.swift */,
+				83CBBA071B6820AE0090C21A /* Assets.xcassets */,
+				83CBBA091B6820AE0090C21A /* Info.plist */,
+				83CBBA061B6820AE0090C21A /* NotiSounds.entitlements */,
+				83CBB9F91B6820AE0090C21A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83CBB9F91B6820AE0090C21A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83CBBF0E1B6820DE0090C21A /* NotiSounds.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83CBB9FF1B6820AE0090C21A /* NotiSounds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83CBB9FD1B6820AE0090C21A /* Build configuration list for PBXNativeTarget "NotiSounds" */;
+			buildPhases = (
+				83CBBA011B6820AE0090C21A /* Sources */,
+				83CBBA021B6820AE0090C21A /* Resources */,
+				83CBBA031B6820AE0090C21A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotiSounds;
+			productName = NotiSounds;
+			productReference = 83CBBF0E1B6820DE0090C21A /* NotiSounds.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71B6820AE0090C21A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					83CBB9FF1B6820AE0090C21A = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1B6820AE0090C21A /* Build configuration list for PBXProject "NotiSounds" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F81B6820AE0090C21A;
+			productRefGroup = 83CBB9F91B6820AE0090C21A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83CBB9FF1B6820AE0090C21A /* NotiSounds */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83CBBA021B6820AE0090C21A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CBBA081B6820AE0090C21A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83CBBA011B6820AE0090C21A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CBBA051B6820AE0090C21A /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		83CBB9FB1B6820AE0090C21A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83CBB9FC1B6820AE0090C21A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		83CBB9FE1B6820AE0090C21A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NotiSounds.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.edexplore.notisounds";
+				PRODUCT_NAME = NotiSounds;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		83CBBA001B6820AE0090C21A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NotiSounds.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.edexplore.notisounds";
+				PRODUCT_NAME = NotiSounds;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83CBB9FA1B6820AE0090C21A /* Build configuration list for PBXProject "NotiSounds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBB9FB1B6820AE0090C21A /* Debug */,
+				83CBB9FC1B6820AE0090C21A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FD1B6820AE0090C21A /* Build configuration list for PBXNativeTarget "NotiSounds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBB9FE1B6820AE0090C21A /* Debug */,
+				83CBBA001B6820AE0090C21A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 83CBB9F71B6820AE0090C21A /* Project object */;
+}

@@ -9,8 +9,9 @@ build/
 *.o
 *.d
 
-# Xcode (for when you migrate to Xcode for App Store submission)
-*.xcodeproj/
+# Xcode — user-specific files (project file is tracked; these are not)
 *.xcworkspace/
 DerivedData/
 xcuserdata/
+*.xcuserstate
+*.xcscheme.bak

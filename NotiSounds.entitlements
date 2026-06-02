@@ -2,31 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-
-    <!-- ─────────────────────────────────────────────────────────────────
-         LOCAL DEVELOPMENT  (no Developer account needed)
-         Sandbox is OFF — app runs without restrictions.
-         ───────────────────────────────────────────────────────────────── -->
+    <!--
+        App Sandbox — required for Mac App Store distribution.
+        The local build.sh uses ad-hoc signing which does not enforce
+        entitlements, so this does not affect local development.
+    -->
     <key>com.apple.security.app-sandbox</key>
-    <false/>
-
-
-    <!-- ─────────────────────────────────────────────────────────────────
-         BEFORE APP STORE SUBMISSION  (requires enrolled Developer account)
-
-         1. Change app-sandbox above to <true/>
-         2. Uncomment the block below so the sandbox allows AppleScript
-            to call System Events (needed for get/set alert volume).
-         3. Test locally with sandbox ON to catch any remaining issues.
-         ───────────────────────────────────────────────────────────────── -->
+    <true/>
 
     <!--
+        AppleScript automation — allows NSAppleScript to send Apple Events
+        to System Events, which is the only public API path to read and set
+        the macOS alert volume.  Paired with NSAppleEventsUsageDescription
+        in Info.plist.
+    -->
     <key>com.apple.security.automation.apple-events</key>
     <dict>
         <key>com.apple.systemevents</key>
         <true/>
     </dict>
-    -->
-
 </dict>
 </plist>

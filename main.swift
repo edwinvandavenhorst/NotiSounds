@@ -53,12 +53,12 @@ final class ContentViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Row 1 — Notification Sounds + toggle
+        // Row 1 — Notification sounds + toggle
         soundsToggle = ToggleSwitch()
         soundsToggle.target = self
         soundsToggle.action = #selector(soundsToggleChanged)
         soundsToggle.translatesAutoresizingMaskIntoConstraints = false
-        let row1 = hrow([makeLabel("Notification Sounds"), spring(), soundsToggle])
+        let row1 = hrow([makeLabel("Notification sounds"), spring(), soundsToggle])
 
         // Row 2 — Volume slider
         volumeSlider = NSSlider(value: 100, minValue: 0, maxValue: 100,
@@ -88,11 +88,10 @@ final class ContentViewController: NSViewController {
         sep.boxType = .separator
         sep.translatesAutoresizingMaskIntoConstraints = false
 
-        // Footer — About… · Hide Icon… · Quit
-        let footer = hrow([footerBtn("About…",     #selector(aboutTapped)),
-                           spring(),
-                           footerBtn("Hide Icon…", #selector(hideTapped)),
-                           footerBtn("Quit",       #selector(quitTapped))])
+        // Footer — About · Hide icon · Quit
+        let footer = hrow([aboutBtn(), spring(),
+                           footerBtn("Hide icon", #selector(hideTapped)),
+                           footerBtn("Quit",      #selector(quitTapped))])
 
         let p: CGFloat = 16
         [row1, row2, row3, sep, footer].forEach { view.addSubview($0) }
@@ -168,6 +167,28 @@ final class ContentViewController: NSViewController {
         b.font = .systemFont(ofSize: NSFont.smallSystemFontSize)
         b.translatesAutoresizingMaskIntoConstraints = false
         return b
+    }
+
+    /// About button: 16 pt app icon + "About" label, both tappable.
+    private func aboutBtn() -> NSView {
+        let icon = NSImageView()
+        icon.image = NSImage(size: NSSize(width: 16, height: 16), flipped: false) { r in
+            NSApp.applicationIconImage.draw(in: r); return true
+        }
+        icon.imageScaling = .scaleProportionallyUpOrDown
+        icon.wantsLayer = true
+        icon.layer?.cornerRadius = 3.5
+        icon.layer?.masksToBounds = true
+        icon.translatesAutoresizingMaskIntoConstraints = false
+        icon.widthAnchor.constraint(equalToConstant: 16).isActive = true
+        icon.heightAnchor.constraint(equalToConstant: 16).isActive = true
+
+        let btn = footerBtn("About", #selector(aboutTapped))
+
+        let stack = NSStackView(views: [icon, btn])
+        stack.orientation = .horizontal; stack.alignment = .centerY; stack.spacing = 4
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
     }
 
     private func hrow(_ views: [NSView]) -> NSStackView {
